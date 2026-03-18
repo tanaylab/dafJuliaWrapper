@@ -11,7 +11,7 @@ attempting to execute the query."></head><body>
 
     <a class="navbar-brand me-2" href="../index.html">dafr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.3</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,7 +58,7 @@ attempting to execute the query.</p>
 
 <dt id="arg-query">query<a class="anchor" aria-label="anchor" href="#arg-query"></a></dt>
 <dd><p>Query string or object. Can be created using query operations such as
-Axis(), Lookup(), IsGreater(), etc.</p></dd>
+Axis(), LookupVector(), IsGreater(), etc.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -67,13 +67,16 @@ Axis(), Lookup(), IsGreater(), etc.</p></dd>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>See the Julia <a href="https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/queries.html#DataAxesFormats.Operations.has_query" class="external-link">documentation</a> for details.</p>
+    <p>See the Julia <a href="https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/queries.html#DataAxesFormats.Operations.has_query" class="external-link">documentation</a> for details.</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p>Axis, Lookup, Names, AsAxis, Fetch, IfMissing, IfNot, MaskSlice, SquareMaskColumn, SquareMaskRow,
-And, AndNot, Or, OrNot, Xor, XorNot, IsEqual, IsNotEqual, IsLess, IsLessEqual, IsGreater, IsGreaterEqual,
-IsMatch, IsNotMatch, CountBy, GroupBy and other query operations.</p></div>
+    <div class="dont-index"><p>Axis, LookupVector, LookupScalar, LookupMatrix, Names, AsAxis, IfMissing, IfNot,
+BeginMask, BeginNegatedMask, EndMask, SquareColumnIs, SquareRowIs,
+AndMask, AndNegatedMask, OrMask, OrNegatedMask, XorMask, XorNegatedMask,
+IsEqual, IsNotEqual, IsLess, IsLessEqual, IsGreater, IsGreaterEqual,
+IsMatch, IsNotMatch, CountBy, GroupBy, GroupColumnsBy, GroupRowsBy,
+ReduceToColumn, ReduceToRow and other query operations.</p></div>
     </div>
 
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

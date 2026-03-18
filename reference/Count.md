@@ -4,7 +4,7 @@ Reduction operation that counts the non-zero elements. This operation
 reduces the dimensionality of the data: a matrix becomes a vector (count
 of non-zero elements in each column), and a vector becomes a scalar
 (count of non-zero elements). See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/operations.html#DataAxesFormats.Operations.Count)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/operations.html#DataAxesFormats.Operations.Count)
 for details.
 
 ## Usage

@@ -24,5 +24,5 @@ A query object that can be used with get_query and has_query
 ## Details
 
 See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/queries.html)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/queries.html)
 for details.

@@ -36,5 +36,5 @@ The Daf object (invisibly, for chaining operations)
 This function creates a new axis with the specified unique entry names.
 If the axis already exists and `overwrite` is FALSE, an error will be
 raised. Entry names must be unique within the axis. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/writers.html#DataAxesFormats.Writers.add_axis!)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/writers.html#DataAxesFormats.Writers.add_axis!)
 for details.

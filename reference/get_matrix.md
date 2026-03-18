@@ -46,5 +46,5 @@ Matrix properties store two-dimensional data along two axes. If the
 matrix doesn't exist and default is NA, a matrix of NAs with appropriate
 dimensions is returned. If `relayout` is TRUE and the matrix exists with
 flipped axes, it will be transposed automatically. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/readers.html#DataAxesFormats.Readers.get_matrix)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/readers.html#DataAxesFormats.Readers.get_matrix)
 for details.

@@ -2,7 +2,7 @@
 
 This function creates a read-only chain wrapper of DafReader objects,
 presenting them as a single DafReader. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/chains.html#DataAxesFormats.Chains.chain_reader)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/chains.html#DataAxesFormats.Chains.chain_reader)
 for details.
 
 ## Usage

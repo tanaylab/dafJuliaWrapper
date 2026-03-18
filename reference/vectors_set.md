@@ -29,5 +29,5 @@ for a specific axis that can be retrieved using
 [`get_vector()`](https://tanaylab.github.io/dafr/reference/get_vector.md).
 Vector properties store one-dimensional data along a specific axis. See
 the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/readers.html#DataAxesFormats.Readers.vectors_set)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/readers.html#DataAxesFormats.Readers.vectors_set)
 for details.

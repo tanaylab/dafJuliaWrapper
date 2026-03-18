@@ -2,7 +2,7 @@
 
 This function creates a Daf object that stores data in disk files. See
 the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/files_format.html)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/files_format.html)
 for details.
 
 ## Usage

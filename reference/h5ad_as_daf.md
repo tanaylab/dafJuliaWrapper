@@ -49,7 +49,7 @@ A Daf object
 ## Details
 
 See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/anndata_format.html#anndata_as_daf)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/anndata_format.html#anndata_as_daf)
 for details. Note that this function works with h5ad file paths, as the
 Julia AnnData object comes from the Muon.jl package and is not
 compatible with R/python anndata implementations.

@@ -31,5 +31,5 @@ The Daf object
 ## Details
 
 See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/queries.html#DataAxesFormats.Data.empty_cache!)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/queries.html#DataAxesFormats.Data.empty_cache!)
 for details.

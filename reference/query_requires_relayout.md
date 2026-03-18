@@ -27,5 +27,5 @@ TRUE if the query requires relayout, FALSE otherwise
 ## Details
 
 See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/queries.html#DataAxesFormats.Queries.query_requires_relayout)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/queries.html#DataAxesFormats.Queries.query_requires_relayout)
 for details.

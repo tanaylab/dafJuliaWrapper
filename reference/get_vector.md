@@ -37,5 +37,5 @@ Vector properties store one-dimensional data along an axis, with one
 value for each entry in the axis. If the vector doesn't exist and
 default is NA, a vector of NAs with appropriate length is returned. See
 the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/readers.html#DataAxesFormats.Readers.get_vector)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/readers.html#DataAxesFormats.Readers.get_vector)
 for details.

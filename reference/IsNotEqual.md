@@ -2,7 +2,7 @@
 
 Similar to `IsLess` except that uses `!=` instead of `<` for the
 comparison. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/queries.html#DataAxesFormats.Queries.IsNotEqual)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/queries.html#DataAxesFormats.Queries.IsNotEqual)
 for details.
 
 ## Usage

@@ -55,5 +55,5 @@ The Daf object (invisibly, for chaining operations)
 ## Details
 
 See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/writers.html#DataAxesFormats.Writers.filled_empty_sparse_matrix!)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/writers.html#DataAxesFormats.Writers.filled_empty_sparse_matrix!)
 for details.

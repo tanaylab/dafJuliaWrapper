@@ -72,5 +72,5 @@ The result of the computation function
 ## Details
 
 See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/adapters.html#DataAxesFormats.Adapters.adapter)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/adapters.html#DataAxesFormats.Adapters.adapter)
 for details.

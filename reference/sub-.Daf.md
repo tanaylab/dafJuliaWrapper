@@ -31,5 +31,5 @@ The result of the query
 
 The expression `daf[query]` is equivalent to
 `get_query(daf, query, cache = FALSE)`. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/queries.html#DataAxesFormats.Operations.get_query)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/queries.html#DataAxesFormats.Operations.get_query)
 for details.

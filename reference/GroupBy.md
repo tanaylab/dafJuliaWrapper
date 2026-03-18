@@ -7,7 +7,7 @@ within each group. If applied to a vector, the result is a vector with
 one entry per group. If applied to a matrix, the result is a matrix with
 one row per group. This is typically followed by a reduction operation
 that specifies how to aggregate the grouped values. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/queries.html#DataAxesFormats.Queries.GroupBY)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/queries.html#DataAxesFormats.Queries.GroupBy)
 for details.
 
 ## Usage

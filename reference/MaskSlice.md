@@ -1,9 +1,8 @@
-# MaskSlice query operation
+# MaskSlice (Deprecated)
 
-A query operation for using a slice of a matrix as a mask, when the
-other axis of the matrix is different from the mask axis. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/queries.html#DataAxesFormats.Queries.MaskSlice)
-for details.
+This function has been removed in DataAxesFormats v0.2.0. Use
+[`BeginMask`](https://tanaylab.github.io/dafr/reference/BeginMask.md)/[`EndMask`](https://tanaylab.github.io/dafr/reference/EndMask.md)
+instead.
 
 ## Usage
 
@@ -15,12 +14,8 @@ MaskSlice(axis, ...)
 
 - axis:
 
-  String specifying the axis
+  An axis to slice.
 
 - ...:
 
-  Additional arguments needed to support usage of pipe operator
-
-## Value
-
-A query operation object
+  Additional arguments (ignored).

@@ -24,5 +24,5 @@ Number of dimensions (-1 - names, 0 - scalar, 1 - vector, 2 - matrix)
 ## Details
 
 See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/queries.html)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/queries.html)
 for details.

@@ -42,5 +42,5 @@ This function creates a transposed version of an existing matrix
 property, allowing efficient access from either axis orientation. If a
 matrix with the flipped axes already exists and `overwrite` is FALSE, an
 error will be raised. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/writers.html#DataAxesFormats.Writers.relayout_matrix!)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/writers.html#DataAxesFormats.Writers.relayout_matrix!)
 for details.

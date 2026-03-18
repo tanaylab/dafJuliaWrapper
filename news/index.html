@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">dafr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.3</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,6 +32,79 @@
       <small>Source: <a href="https://github.com/tanaylab/dafr/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.1.0" id="dafr-010">dafr 0.1.0<a class="anchor" aria-label="anchor" href="#dafr-010"></a></h2>
+<div class="section level3">
+<h3 id="breaking-changes-0-1-0">Breaking Changes<a class="anchor" aria-label="anchor" href="#breaking-changes-0-1-0"></a></h3>
+<div class="section level4">
+<h4 id="updated-to-dataaxesformatsjl-v020-api-0-1-0">Updated to DataAxesFormats.jl v0.2.0 API<a class="anchor" aria-label="anchor" href="#updated-to-dataaxesformatsjl-v020-api-0-1-0"></a></h4>
+<ul><li>Renamed query operations to match v0.2.0 naming:
+<ul><li>
+<code>Lookup</code> -&gt; <code>LookupVector</code>
+</li>
+<li>
+<code>And</code> -&gt; <code>AndMask</code>
+</li>
+<li>
+<code>AndNot</code> -&gt; <code>AndNegatedMask</code>
+</li>
+<li>
+<code>Or</code> -&gt; <code>OrMask</code>
+</li>
+<li>
+<code>OrNot</code> -&gt; <code>OrNegatedMask</code>
+</li>
+<li>
+<code>Xor</code> -&gt; <code>XorMask</code>
+</li>
+<li>
+<code>XorNot</code> -&gt; <code>XorNegatedMask</code>
+</li>
+<li>
+<code>SquareMaskColumn</code> -&gt; <code>SquareColumnIs</code>
+</li>
+<li>
+<code>SquareMaskRow</code> -&gt; <code>SquareRowIs</code>
+</li>
+</ul></li>
+<li>Removed <code>Fetch</code> and <code>MaskSlice</code> (deprecated wrappers still provided for backwards compatibility)</li>
+<li>Deprecated wrappers provided for all renamed functions with deprecation warnings</li>
+</ul></div>
+<div class="section level4">
+<h4 id="parameter-changes-0-1-0">Parameter Changes<a class="anchor" aria-label="anchor" href="#parameter-changes-0-1-0"></a></h4>
+<ul><li>
+<code>Names</code>: removed <code>kind</code> parameter</li>
+<li>
+<code>IfMissing</code>: <code>missing_value</code> renamed to <code>default_value</code>, <code>type</code> parameter removed</li>
+<li>
+<code>Axis</code>: now optional in queries</li>
+</ul></div>
+</div>
+<div class="section level3">
+<h3 id="new-features-0-1-0">New Features<a class="anchor" aria-label="anchor" href="#new-features-0-1-0"></a></h3>
+<div class="section level4">
+<h4 id="new-query-operations-0-1-0">New Query Operations<a class="anchor" aria-label="anchor" href="#new-query-operations-0-1-0"></a></h4>
+<ul><li>Added <code>LookupScalar</code> for looking up scalar data</li>
+<li>Added <code>LookupMatrix</code> for looking up matrix data</li>
+<li>Added <code>BeginMask</code> for starting a mask combination</li>
+<li>Added <code>BeginNegatedMask</code> for starting a negated mask combination</li>
+<li>Added <code>EndMask</code> for ending a mask combination</li>
+<li>Added <code>GroupColumnsBy</code> for grouping columns</li>
+<li>Added <code>GroupRowsBy</code> for grouping rows</li>
+<li>Added <code>ReduceToColumn</code> for reducing matrix to a column vector</li>
+<li>Added <code>ReduceToRow</code> for reducing matrix to a row vector</li>
+</ul></div>
+<div class="section level4">
+<h4 id="new-functions-0-1-0">New Functions<a class="anchor" aria-label="anchor" href="#new-functions-0-1-0"></a></h4>
+<ul><li>Added <code>complete_path</code> for constructing complete paths to Daf data</li>
+<li>Added <code>complete_chain</code> for opening complete chain Daf repositories</li>
+</ul></div>
+<div class="section level4">
+<h4 id="documentation-0-1-0">Documentation<a class="anchor" aria-label="anchor" href="#documentation-0-1-0"></a></h4>
+<ul><li>All documentation URLs updated to DataAxesFormats.jl v0.2.0</li>
+</ul></div>
+</div>
+</div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.0.3" id="dafr-003">dafr 0.0.3<a class="anchor" aria-label="anchor" href="#dafr-003"></a></h2>
 <div class="section level3">

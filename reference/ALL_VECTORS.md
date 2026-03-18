@@ -15,4 +15,4 @@ Character vector of length 2
 
 ## References
 
-<https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/views.html#DataAxesFormats.Views.ALL_VECTORS>
+<https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/views.html#DataAxesFormats.Views.ALL_VECTORS>

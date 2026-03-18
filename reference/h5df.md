@@ -2,7 +2,7 @@
 
 This function creates a Daf object that stores data in an HDF5 disk
 file. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/h5df_format.html)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/h5df_format.html)
 for details.
 
 ## Usage

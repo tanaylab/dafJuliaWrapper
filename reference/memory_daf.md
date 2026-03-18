@@ -2,7 +2,7 @@
 
 This function creates a Daf object that stores data in memory. See the
 Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/memory_format.html)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/memory_format.html)
 for details.
 
 ## Usage

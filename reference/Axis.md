@@ -4,20 +4,20 @@ A query operation for specifying a result axis in a query sequence. This
 is typically the first operation in a query sequence and determines
 which axis the query will operate on. It sets the context for subsequent
 operations in the query. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/queries.html#DataAxesFormats.Queries.Axis)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/queries.html#DataAxesFormats.Queries.Axis)
 for details.
 
 ## Usage
 
 ``` r
-Axis(axis, ...)
+Axis(axis = NULL, ...)
 ```
 
 ## Arguments
 
 - axis:
 
-  String specifying the axis name
+  Optional string specifying the axis name (NULL for unspecified)
 
 - ...:
 

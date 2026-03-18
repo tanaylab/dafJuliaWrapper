@@ -15,7 +15,7 @@ for details."></head><body>
 
     <a class="navbar-brand me-2" href="../index.html">dafr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.3</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,25 +45,21 @@ for details."></head><body>
     <p>A query operation providing a default value to use if the data is missing some property.
 This is useful when querying for properties that might not exist for all entries, allowing you to
 provide a fallback value instead of getting an error. See the Julia
-<a href="https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/queries.html#DataAxesFormats.Queries.IfMissing" class="external-link">documentation</a>
+<a href="https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/queries.html#DataAxesFormats.Queries.IfMissing" class="external-link">documentation</a>
 for details.</p>
     </div>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">IfMissing</span><span class="op">(</span><span class="va">missing_value</span>, type <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">IfMissing</span><span class="op">(</span><span class="va">default_value</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
 
 
-<dl><dt id="arg-missing-value">missing_value<a class="anchor" aria-label="anchor" href="#arg-missing-value"></a></dt>
+<dl><dt id="arg-default-value">default_value<a class="anchor" aria-label="anchor" href="#arg-default-value"></a></dt>
 <dd><p>Value to use when data is missing the property</p></dd>
-
-
-<dt id="arg-type">type<a class="anchor" aria-label="anchor" href="#arg-type"></a></dt>
-<dd><p>Optional type specification for the missing value (e.g., "Int64", "Float64", "Bool")</p></dd>
 
 
 <dt id="arg--">...<a class="anchor" aria-label="anchor" href="#arg--"></a></dt>

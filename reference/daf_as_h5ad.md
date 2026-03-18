@@ -49,6 +49,6 @@ Invisibly returns the input Daf object
 ## Details
 
 See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/anndata_format.html#DataAxesFormats.AnnDataFormat.daf_as_anndata)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/anndata_format.html#DataAxesFormats.AnnDataFormat.daf_as_anndata)
 for details. Note this just creates the h5ad file. The Julia (Muon.jl)
 AnnData object is not returned or exposed to R.

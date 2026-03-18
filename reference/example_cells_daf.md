@@ -22,5 +22,5 @@ A Daf object containing example cells data
 
 This function loads example cells data from the DataAxesFormats.jl
 package. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/example_data.html)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/example_data.html)
 for details.

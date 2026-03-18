@@ -41,5 +41,5 @@ Matrix properties store two-dimensional data along two axes. If
 `relayout` is TRUE, this function will also check if the matrix exists
 with the axes flipped (i.e., rows as columns and columns as rows). See
 the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/readers.html#DataAxesFormats.Readers.has_matrix)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/readers.html#DataAxesFormats.Readers.has_matrix)
 for details.

@@ -36,5 +36,5 @@ The Daf object (invisibly, for chaining operations)
 This function creates or updates a scalar property in the Daf data set.
 If the scalar already exists and `overwrite` is FALSE, an error will be
 raised. NA values are not supported in Daf. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/writers.html#DataAxesFormats.Writers.set_scalar!)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/writers.html#DataAxesFormats.Writers.set_scalar!)
 for details.

@@ -4,7 +4,7 @@ Element-wise operation that converts every element to a value inside a
 range. This operation preserves the shape of the data (scalar, vector,
 or matrix) but changes the values, setting each value to be within the
 specified range. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/operations.html#DataAxesFormats.Operations.Clamp)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/operations.html#DataAxesFormats.Operations.Clamp)
 for details.
 
 ## Usage

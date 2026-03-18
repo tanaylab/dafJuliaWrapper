@@ -51,5 +51,5 @@ A Julia matrix object that can be filled in-place
 ## Details
 
 See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/writers.html#DataAxesFormats.Writers.get_empty_dense_matrix!)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/writers.html#DataAxesFormats.Writers.get_empty_dense_matrix!)
 for details.

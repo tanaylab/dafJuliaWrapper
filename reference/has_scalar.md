@@ -27,5 +27,5 @@ TRUE if scalar exists, FALSE otherwise
 
 Scalar properties are global values associated with the entire Daf data
 set. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/readers.html#DataAxesFormats.Readers.has_scalar)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/readers.html#DataAxesFormats.Readers.has_scalar)
 for details.

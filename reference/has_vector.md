@@ -31,5 +31,5 @@ TRUE if vector exists, FALSE otherwise
 
 Vector properties store one-dimensional data along a specific axis. Each
 entry in the axis has a corresponding value in the vector. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/readers.html#DataAxesFormats.Readers.has_vector)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/readers.html#DataAxesFormats.Readers.has_vector)
 for details.

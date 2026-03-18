@@ -19,7 +19,7 @@ has_query(daf, query)
 - query:
 
   Query string or object. Can be created using query operations such as
-  Axis(), Lookup(), IsGreater(), etc.
+  Axis(), LookupVector(), IsGreater(), etc.
 
 ## Value
 
@@ -28,12 +28,14 @@ TRUE if query can be applied, FALSE otherwise
 ## Details
 
 See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/queries.html#DataAxesFormats.Operations.has_query)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/queries.html#DataAxesFormats.Operations.has_query)
 for details.
 
 ## See also
 
-Axis, Lookup, Names, AsAxis, Fetch, IfMissing, IfNot, MaskSlice,
-SquareMaskColumn, SquareMaskRow, And, AndNot, Or, OrNot, Xor, XorNot,
-IsEqual, IsNotEqual, IsLess, IsLessEqual, IsGreater, IsGreaterEqual,
-IsMatch, IsNotMatch, CountBy, GroupBy and other query operations.
+Axis, LookupVector, LookupScalar, LookupMatrix, Names, AsAxis,
+IfMissing, IfNot, BeginMask, BeginNegatedMask, EndMask, SquareColumnIs,
+SquareRowIs, AndMask, AndNegatedMask, OrMask, OrNegatedMask, XorMask,
+XorNegatedMask, IsEqual, IsNotEqual, IsLess, IsLessEqual, IsGreater,
+IsGreaterEqual, IsMatch, IsNotMatch, CountBy, GroupBy, GroupColumnsBy,
+GroupRowsBy, ReduceToColumn, ReduceToRow and other query operations.

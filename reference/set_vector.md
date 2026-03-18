@@ -41,5 +41,5 @@ This function creates or updates a vector property in the Daf data set.
 The length of the vector must match the length of the axis. If the
 vector already exists and `overwrite` is FALSE, an error will be raised.
 NA values are not supported in Daf. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/writers.html#DataAxesFormats.Writers.set_vector!)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/writers.html#DataAxesFormats.Writers.set_vector!)
 for details.

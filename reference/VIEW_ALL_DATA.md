@@ -17,4 +17,4 @@ VIEW_ALL_MATRICES
 
 ## References
 
-<https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/views.html#DataAxesFormats.Views.VIEW_ALL_DATA>
+<https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/views.html#DataAxesFormats.Views.VIEW_ALL_DATA>

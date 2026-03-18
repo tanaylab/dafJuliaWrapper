@@ -2,7 +2,7 @@
 
 Similar to `IsMatch` except that looks for entries that do not match the
 pattern. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/queries.html#DataAxesFormats.Queries.IsNotMatch)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/queries.html#DataAxesFormats.Queries.IsNotMatch)
 for details.
 
 ## Usage

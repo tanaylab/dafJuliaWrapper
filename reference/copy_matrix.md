@@ -99,5 +99,5 @@ The destination Daf object (invisibly)
 ## Details
 
 See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/copies.html#DataAxesFormats.Copies.copy_matrix!)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/copies.html#DataAxesFormats.Copies.copy_matrix!)
 for details.

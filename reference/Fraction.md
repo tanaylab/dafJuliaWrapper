@@ -4,7 +4,7 @@ Element-wise operation that converts every element to its fraction out
 of the total. This operation preserves the shape of the data (scalar,
 vector, or matrix) but changes each value to be the fraction of the
 total sum of all values in the data. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/operations.html#DataAxesFormats.Operations.Fraction)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/operations.html#DataAxesFormats.Operations.Fraction)
 for details.
 
 ## Usage

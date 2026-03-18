@@ -1,24 +1,17 @@
 # Names query operation
 
 A query operation for looking up a set of names in a Daf object. This
-operation retrieves metadata names such as axis names, property names,
-or scalar names. It is often used to discover what data is available in
-a Daf object. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/queries.html#DataAxesFormats.Queries.Names)
+operation retrieves the entry names of the current axis. See the Julia
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/queries.html#DataAxesFormats.Queries.Names)
 for details.
 
 ## Usage
 
 ``` r
-Names(kind = NULL, ...)
+Names(...)
 ```
 
 ## Arguments
-
-- kind:
-
-  Optional string specifying the kind of names to look up (e.g., "axes",
-  "scalars")
 
 - ...:
 

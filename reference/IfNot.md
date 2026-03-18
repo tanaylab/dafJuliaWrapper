@@ -5,7 +5,7 @@ vector. This replaces empty strings, zero numeric values, or false
 Boolean values with the specified value. This is useful for handling
 default or missing values in data without completely replacing the
 property. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/queries.html#DataAxesFormats.Queries.IfNot)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/queries.html#DataAxesFormats.Queries.IfNot)
 for details.
 
 ## Usage

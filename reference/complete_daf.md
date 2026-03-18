@@ -37,5 +37,5 @@ mode. The `base_daf_repository` path is relative to the directory
 containing the child repository.
 
 See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/complete.html)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/complete.html)
 for details.

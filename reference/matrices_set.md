@@ -38,5 +38,5 @@ for specific axes that can be retrieved using
 [`get_matrix()`](https://tanaylab.github.io/dafr/reference/get_matrix.md).
 If `relayout` is TRUE, matrices stored with the axes flipped are also
 included. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/readers.html#DataAxesFormats.Readers.matrices_set)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/readers.html#DataAxesFormats.Readers.matrices_set)
 for details.

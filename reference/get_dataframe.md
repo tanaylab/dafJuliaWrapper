@@ -53,5 +53,5 @@ This function allows retrieving multiple vectors for the same axis in a
 single operation. The `columns` parameter can be a vector of vector
 names, or a named list mapping output column names to vector names or
 query strings. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/queries.html#DataAxesFormats.Queries.get_frame)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/queries.html#DataAxesFormats.Queries.get_frame)
 for more details.

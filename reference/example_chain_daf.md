@@ -22,5 +22,5 @@ A Daf object containing chained example cells and metacells data
 
 This function creates a chain of example cells and metacells data. See
 the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/example_data.html)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/example_data.html)
 for details.

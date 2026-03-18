@@ -3,7 +3,7 @@
 Equality is used for two purposes: As a comparison operator, similar to
 `IsLess` except that uses `=` instead of `<` for the comparison; and To
 select a single entry from a vector. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/queries.html#DataAxesFormats.Queries.IsEqual)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/queries.html#DataAxesFormats.Queries.IsEqual)
 for details.
 
 ## Usage

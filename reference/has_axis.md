@@ -28,5 +28,5 @@ TRUE if the axis exists, FALSE otherwise
 Axes are fundamental dimensions in a Daf data set along which vector and
 matrix data are stored. Each axis has a collection of unique named
 entries. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/readers.html#DataAxesFormats.Readers.has_axis)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/readers.html#DataAxesFormats.Readers.has_axis)
 for details.

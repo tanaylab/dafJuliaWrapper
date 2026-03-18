@@ -34,5 +34,5 @@ names for a "gene" axis or cell barcodes for a "cell" axis. These entry
 names can be used to look up specific indices using the
 [`axis_indices()`](https://tanaylab.github.io/dafr/reference/axis_indices.md)
 function. See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/readers.html#DataAxesFormats.Readers.axis_vector)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/readers.html#DataAxesFormats.Readers.axis_vector)
 for details.

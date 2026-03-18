@@ -38,5 +38,5 @@ using a path with a `.h5dfs` suffix, followed by `#` and the path of the
 group in the file.
 
 See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/complete.html)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/complete.html)
 for details.

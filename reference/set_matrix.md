@@ -59,5 +59,5 @@ axes. If the matrix already exists and `overwrite` is FALSE, an error
 will be raised. If `relayout` is TRUE, the matrix will also be stored
 with axes flipped for faster access. NA values are not supported in Daf.
 See the Julia
-[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/writers.html#DataAxesFormats.Writers.set_matrix!)
+[documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/writers.html#DataAxesFormats.Writers.set_matrix!)
 for details.

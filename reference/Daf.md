@@ -22,8 +22,8 @@ A Daf S3 object
 ## Details
 
 See the Julia documentation
-[here](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/index.html),
-[here](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/formats.html#Read-API)
+[here](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/index.html),
+[here](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/formats.html#Read-API)
 and
-[here](https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/formats.html#Write-API)
+[here](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/formats.html#Write-API)
 for details.

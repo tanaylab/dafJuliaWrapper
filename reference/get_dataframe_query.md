@@ -20,8 +20,8 @@ get_dataframe_query(daf = NULL, query = NULL, cache = TRUE)
 - query:
 
   Query string or object. Can be created using query operations such as
-  Axis(), Lookup(), IsGreater(), etc. In order to support the use of
-  pipe operators, the query can also be a Daf object and vice versa.
+  Axis(), LookupVector(), IsGreater(), etc. In order to support the use
+  of pipe operators, the query can also be a Daf object and vice versa.
 
 - cache:
 

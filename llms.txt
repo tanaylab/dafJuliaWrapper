@@ -318,6 +318,10 @@ Reading Daf data from different sources and formats
   : Create a read-only chain wrapper of DafReader objects
 - [`complete_daf()`](https://tanaylab.github.io/dafr/reference/complete_daf.md)
   : Complete chain of Daf repositories
+- [`complete_chain()`](https://tanaylab.github.io/dafr/reference/complete_chain.md)
+  : Create a persistent chain from a base Daf and a new Daf
+- [`complete_path()`](https://tanaylab.github.io/dafr/reference/complete_path.md)
+  : Get the complete filesystem path of a persistent Daf repository
 - [`open_daf()`](https://tanaylab.github.io/dafr/reference/open_daf.md)
   : Open a Daf repository based on path
 
@@ -488,23 +492,37 @@ scalar)
   CountBy query operation
 - [`GroupBy()`](https://tanaylab.github.io/dafr/reference/GroupBy.md) :
   GroupBy query operation
+- [`GroupColumnsBy()`](https://tanaylab.github.io/dafr/reference/GroupColumnsBy.md)
+  : GroupColumnsBy query operation
+- [`GroupRowsBy()`](https://tanaylab.github.io/dafr/reference/GroupRowsBy.md)
+  : GroupRowsBy query operation
+- [`ReduceToColumn()`](https://tanaylab.github.io/dafr/reference/ReduceToColumn.md)
+  : ReduceToColumn query operation
+- [`ReduceToRow()`](https://tanaylab.github.io/dafr/reference/ReduceToRow.md)
+  : ReduceToRow query operation
 
 ## Query Operations - Logical
 
 Logical operations for filtering and combining data
 
-- [`And()`](https://tanaylab.github.io/dafr/reference/And.md) : And
-  query operation
-- [`AndNot()`](https://tanaylab.github.io/dafr/reference/AndNot.md) :
-  AndNot query operation
-- [`Or()`](https://tanaylab.github.io/dafr/reference/Or.md) : Or query
-  operation
-- [`OrNot()`](https://tanaylab.github.io/dafr/reference/OrNot.md) :
-  OrNot query operation
-- [`Xor()`](https://tanaylab.github.io/dafr/reference/Xor.md) : Xor
-  query operation
-- [`XorNot()`](https://tanaylab.github.io/dafr/reference/XorNot.md) :
-  XorNot query operation
+- [`And()`](https://tanaylab.github.io/dafr/reference/AndMask.md)
+  [`AndMask()`](https://tanaylab.github.io/dafr/reference/AndMask.md) :
+  AndMask query operation
+- [`AndNot()`](https://tanaylab.github.io/dafr/reference/AndNegatedMask.md)
+  [`AndNegatedMask()`](https://tanaylab.github.io/dafr/reference/AndNegatedMask.md)
+  : AndNegatedMask query operation
+- [`Or()`](https://tanaylab.github.io/dafr/reference/OrMask.md)
+  [`OrMask()`](https://tanaylab.github.io/dafr/reference/OrMask.md) :
+  OrMask query operation
+- [`OrNot()`](https://tanaylab.github.io/dafr/reference/OrNegatedMask.md)
+  [`OrNegatedMask()`](https://tanaylab.github.io/dafr/reference/OrNegatedMask.md)
+  : OrNegatedMask query operation
+- [`Xor()`](https://tanaylab.github.io/dafr/reference/XorMask.md)
+  [`XorMask()`](https://tanaylab.github.io/dafr/reference/XorMask.md) :
+  XorMask query operation
+- [`XorNot()`](https://tanaylab.github.io/dafr/reference/XorNegatedMask.md)
+  [`XorNegatedMask()`](https://tanaylab.github.io/dafr/reference/XorNegatedMask.md)
+  : XorNegatedMask query operation
 - [`IsEqual()`](https://tanaylab.github.io/dafr/reference/IsEqual.md) :
   IsEqual query operation
 - [`IsGreater()`](https://tanaylab.github.io/dafr/reference/IsGreater.md)
@@ -528,24 +546,37 @@ Operations for selecting data from axes and properties
 
 - [`Axis()`](https://tanaylab.github.io/dafr/reference/Axis.md) : Axis
   query operation
-- [`Lookup()`](https://tanaylab.github.io/dafr/reference/Lookup.md) :
-  Lookup query operation
+- [`Lookup()`](https://tanaylab.github.io/dafr/reference/LookupVector.md)
+  [`LookupVector()`](https://tanaylab.github.io/dafr/reference/LookupVector.md)
+  : LookupVector query operation
+- [`LookupScalar()`](https://tanaylab.github.io/dafr/reference/LookupScalar.md)
+  : LookupScalar query operation
+- [`LookupMatrix()`](https://tanaylab.github.io/dafr/reference/LookupMatrix.md)
+  : LookupMatrix query operation
 - [`Names()`](https://tanaylab.github.io/dafr/reference/Names.md) :
   Names query operation
 - [`AsAxis()`](https://tanaylab.github.io/dafr/reference/AsAxis.md) :
   AsAxis query operation
 - [`Fetch()`](https://tanaylab.github.io/dafr/reference/Fetch.md) :
-  Fetch query operation
+  Fetch (Deprecated)
 - [`IfMissing()`](https://tanaylab.github.io/dafr/reference/IfMissing.md)
   : IfMissing query operation
 - [`IfNot()`](https://tanaylab.github.io/dafr/reference/IfNot.md) :
   IfNot query operation
+- [`BeginMask()`](https://tanaylab.github.io/dafr/reference/BeginMask.md)
+  : BeginMask query operation
+- [`BeginNegatedMask()`](https://tanaylab.github.io/dafr/reference/BeginNegatedMask.md)
+  : BeginNegatedMask query operation
+- [`EndMask()`](https://tanaylab.github.io/dafr/reference/EndMask.md) :
+  EndMask query operation
 - [`MaskSlice()`](https://tanaylab.github.io/dafr/reference/MaskSlice.md)
-  : MaskSlice query operation
-- [`SquareMaskColumn()`](https://tanaylab.github.io/dafr/reference/SquareMaskColumn.md)
-  : SquareMaskColumn query operation
-- [`SquareMaskRow()`](https://tanaylab.github.io/dafr/reference/SquareMaskRow.md)
-  : SquareMaskRow query operation
+  : MaskSlice (Deprecated)
+- [`SquareMaskColumn()`](https://tanaylab.github.io/dafr/reference/SquareColumnIs.md)
+  [`SquareColumnIs()`](https://tanaylab.github.io/dafr/reference/SquareColumnIs.md)
+  : SquareColumnIs query operation
+- [`SquareMaskRow()`](https://tanaylab.github.io/dafr/reference/SquareRowIs.md)
+  [`SquareRowIs()`](https://tanaylab.github.io/dafr/reference/SquareRowIs.md)
+  : SquareRowIs query operation
 
 ## Views and Adapters
 
@@ -630,4 +661,11 @@ Utility functions for working with Daf objects
   : Set a seed both in Julia and R
 - [`setup_logger()`](https://tanaylab.github.io/dafr/reference/setup_logger.md)
   : Set up a global logger
+
+## Deprecated
+
+Deprecated functions and their replacements
+
+- [`deprecated-queries`](https://tanaylab.github.io/dafr/reference/deprecated-queries.md)
+  : Deprecated query operations
 

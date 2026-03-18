@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">dafr</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.3</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -340,6 +340,20 @@
 
         </dt>
         <dd>Complete chain of Daf repositories</dd>
+
+        <dt>
+
+          <code><a href="complete_chain.html">complete_chain()</a></code>
+
+        </dt>
+        <dd>Create a persistent chain from a base Daf and a new Daf</dd>
+
+        <dt>
+
+          <code><a href="complete_path.html">complete_path()</a></code>
+
+        </dt>
+        <dd>Get the complete filesystem path of a persistent Daf repository</dd>
 
         <dt>
 
@@ -882,6 +896,34 @@
 
         </dt>
         <dd>GroupBy query operation</dd>
+
+        <dt>
+
+          <code><a href="GroupColumnsBy.html">GroupColumnsBy()</a></code>
+
+        </dt>
+        <dd>GroupColumnsBy query operation</dd>
+
+        <dt>
+
+          <code><a href="GroupRowsBy.html">GroupRowsBy()</a></code>
+
+        </dt>
+        <dd>GroupRowsBy query operation</dd>
+
+        <dt>
+
+          <code><a href="ReduceToColumn.html">ReduceToColumn()</a></code>
+
+        </dt>
+        <dd>ReduceToColumn query operation</dd>
+
+        <dt>
+
+          <code><a href="ReduceToRow.html">ReduceToRow()</a></code>
+
+        </dt>
+        <dd>ReduceToRow query operation</dd>
       </dl></div><div class="section level2">
       <h2 id="query-operations-logical">Query Operations - Logical<a class="anchor" aria-label="anchor" href="#query-operations-logical"></a></h2>
 
@@ -894,45 +936,45 @@
 
       <dl><dt>
 
-          <code><a href="And.html">And()</a></code>
+          <code><a href="AndMask.html">And()</a></code> <code><a href="AndMask.html">AndMask()</a></code>
 
         </dt>
-        <dd>And query operation</dd>
+        <dd>AndMask query operation</dd>
 
         <dt>
 
-          <code><a href="AndNot.html">AndNot()</a></code>
+          <code><a href="AndNegatedMask.html">AndNot()</a></code> <code><a href="AndNegatedMask.html">AndNegatedMask()</a></code>
 
         </dt>
-        <dd>AndNot query operation</dd>
+        <dd>AndNegatedMask query operation</dd>
 
         <dt>
 
-          <code><a href="Or.html">Or()</a></code>
+          <code><a href="OrMask.html">Or()</a></code> <code><a href="OrMask.html">OrMask()</a></code>
 
         </dt>
-        <dd>Or query operation</dd>
+        <dd>OrMask query operation</dd>
 
         <dt>
 
-          <code><a href="OrNot.html">OrNot()</a></code>
+          <code><a href="OrNegatedMask.html">OrNot()</a></code> <code><a href="OrNegatedMask.html">OrNegatedMask()</a></code>
 
         </dt>
-        <dd>OrNot query operation</dd>
+        <dd>OrNegatedMask query operation</dd>
 
         <dt>
 
-          <code><a href="Xor.html">Xor()</a></code>
+          <code><a href="XorMask.html">Xor()</a></code> <code><a href="XorMask.html">XorMask()</a></code>
 
         </dt>
-        <dd>Xor query operation</dd>
+        <dd>XorMask query operation</dd>
 
         <dt>
 
-          <code><a href="XorNot.html">XorNot()</a></code>
+          <code><a href="XorNegatedMask.html">XorNot()</a></code> <code><a href="XorNegatedMask.html">XorNegatedMask()</a></code>
 
         </dt>
-        <dd>XorNot query operation</dd>
+        <dd>XorNegatedMask query operation</dd>
 
         <dt>
 
@@ -1008,10 +1050,24 @@
 
         <dt>
 
-          <code><a href="Lookup.html">Lookup()</a></code>
+          <code><a href="LookupVector.html">Lookup()</a></code> <code><a href="LookupVector.html">LookupVector()</a></code>
 
         </dt>
-        <dd>Lookup query operation</dd>
+        <dd>LookupVector query operation</dd>
+
+        <dt>
+
+          <code><a href="LookupScalar.html">LookupScalar()</a></code>
+
+        </dt>
+        <dd>LookupScalar query operation</dd>
+
+        <dt>
+
+          <code><a href="LookupMatrix.html">LookupMatrix()</a></code>
+
+        </dt>
+        <dd>LookupMatrix query operation</dd>
 
         <dt>
 
@@ -1032,7 +1088,7 @@
           <code><a href="Fetch.html">Fetch()</a></code>
 
         </dt>
-        <dd>Fetch query operation</dd>
+        <dd>Fetch (Deprecated)</dd>
 
         <dt>
 
@@ -1050,24 +1106,45 @@
 
         <dt>
 
+          <code><a href="BeginMask.html">BeginMask()</a></code>
+
+        </dt>
+        <dd>BeginMask query operation</dd>
+
+        <dt>
+
+          <code><a href="BeginNegatedMask.html">BeginNegatedMask()</a></code>
+
+        </dt>
+        <dd>BeginNegatedMask query operation</dd>
+
+        <dt>
+
+          <code><a href="EndMask.html">EndMask()</a></code>
+
+        </dt>
+        <dd>EndMask query operation</dd>
+
+        <dt>
+
           <code><a href="MaskSlice.html">MaskSlice()</a></code>
 
         </dt>
-        <dd>MaskSlice query operation</dd>
+        <dd>MaskSlice (Deprecated)</dd>
 
         <dt>
 
-          <code><a href="SquareMaskColumn.html">SquareMaskColumn()</a></code>
+          <code><a href="SquareColumnIs.html">SquareMaskColumn()</a></code> <code><a href="SquareColumnIs.html">SquareColumnIs()</a></code>
 
         </dt>
-        <dd>SquareMaskColumn query operation</dd>
+        <dd>SquareColumnIs query operation</dd>
 
         <dt>
 
-          <code><a href="SquareMaskRow.html">SquareMaskRow()</a></code>
+          <code><a href="SquareRowIs.html">SquareMaskRow()</a></code> <code><a href="SquareRowIs.html">SquareRowIs()</a></code>
 
         </dt>
-        <dd>SquareMaskRow query operation</dd>
+        <dd>SquareRowIs query operation</dd>
       </dl></div><div class="section level2">
       <h2 id="views-and-adapters">Views and Adapters<a class="anchor" aria-label="anchor" href="#views-and-adapters"></a></h2>
 
@@ -1309,6 +1386,22 @@
 
         </dt>
         <dd>Set up a global logger</dd>
+      </dl></div><div class="section level2">
+      <h2 id="deprecated">Deprecated<a class="anchor" aria-label="anchor" href="#deprecated"></a></h2>
+
+      <div class="section-desc"><p>Deprecated functions and their replacements</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="deprecated-queries.html">deprecated-queries</a></code>
+
+        </dt>
+        <dd>Deprecated query operations</dd>
       </dl></div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
