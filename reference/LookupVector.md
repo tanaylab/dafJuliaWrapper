@@ -13,7 +13,7 @@ for details.
 ``` r
 Lookup(property, ...)
 
-LookupVector(property, ...)
+LookupVector(property = NULL, ...)
 ```
 
 ## Arguments

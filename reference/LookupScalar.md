@@ -8,7 +8,7 @@ for details.
 ## Usage
 
 ``` r
-LookupScalar(property, ...)
+LookupScalar(property = NULL, ...)
 ```
 
 ## Arguments
