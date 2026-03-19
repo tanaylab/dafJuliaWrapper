@@ -118,75 +118,78 @@
 <span></span>
 <span><span class="co"># Basic queries using the [ operator</span></span>
 <span><span class="co"># Get scalar values</span></span>
-<span><span class="va">daf</span><span class="op">[</span><span class="st">": version"</span><span class="op">]</span> <span class="co"># Get a scalar</span></span>
+<span><span class="va">daf</span><span class="op">[</span><span class="st">". version"</span><span class="op">]</span> <span class="co"># Get a scalar</span></span>
 <span><span class="co">#&gt; [1] "1.0"</span></span>
 <span></span>
 <span><span class="co"># Access axes and properties</span></span>
-<span><span class="va">daf</span><span class="op">[</span><span class="st">"? axes"</span><span class="op">]</span> <span class="co"># List all axes</span></span>
+<span><span class="va">daf</span><span class="op">[</span><span class="st">"@ ?"</span><span class="op">]</span> <span class="co"># List all axes</span></span>
 <span><span class="co">#&gt; [1] "gene" "cell"</span></span>
-<span><span class="va">daf</span><span class="op">[</span><span class="st">"/ cell ?"</span><span class="op">]</span> <span class="co"># List properties of the "cell" axis</span></span>
+<span><span class="va">daf</span><span class="op">[</span><span class="st">"@ cell : ?"</span><span class="op">]</span> <span class="co"># List properties of the "cell" axis</span></span>
 <span><span class="co">#&gt; [1] "type" "age"</span></span>
 <span></span>
 <span><span class="co"># Access vector data</span></span>
-<span><span class="va">daf</span><span class="op">[</span><span class="st">"/ cell : age"</span><span class="op">]</span> <span class="co"># Get the "age" vector for all cells</span></span>
+<span><span class="va">daf</span><span class="op">[</span><span class="st">"@ cell : age"</span><span class="op">]</span> <span class="co"># Get the "age" vector for all cells</span></span>
 <span><span class="co">#&gt;  A  B  C </span></span>
 <span><span class="co">#&gt;  1  5 10</span></span>
 <span></span>
 <span><span class="co"># Access matrix data</span></span>
-<span><span class="va">daf</span><span class="op">[</span><span class="st">"/ cell / gene : counts"</span><span class="op">]</span> <span class="co"># Get the full counts matrix</span></span>
+<span><span class="va">daf</span><span class="op">[</span><span class="st">"@ cell @ gene :: counts"</span><span class="op">]</span> <span class="co"># Get the full counts matrix</span></span>
 <span><span class="co">#&gt;   X Y Z</span></span>
 <span><span class="co">#&gt; A 1 4 7</span></span>
 <span><span class="co">#&gt; B 2 5 8</span></span>
 <span><span class="co">#&gt; C 3 6 9</span></span>
 <span></span>
 <span><span class="co"># Filter data</span></span>
-<span><span class="va">daf</span><span class="op">[</span><span class="st">"/ cell &amp; age &gt; 2 : type"</span><span class="op">]</span> <span class="co"># Get types of cells with age &gt; 2</span></span>
+<span><span class="va">daf</span><span class="op">[</span><span class="st">"@ cell [ age &gt; 2 ] : type"</span><span class="op">]</span> <span class="co"># Get types of cells with age &gt; 2</span></span>
 <span><span class="co">#&gt;    B    C </span></span>
 <span><span class="co">#&gt;  "B" "NK"</span></span>
 <span></span>
 <span><span class="co"># Transform data</span></span>
-<span><span class="va">daf</span><span class="op">[</span><span class="st">"/ cell : age % Abs"</span><span class="op">]</span> <span class="co"># Get absolute values of ages</span></span>
+<span><span class="va">daf</span><span class="op">[</span><span class="st">"@ cell : age % Abs"</span><span class="op">]</span> <span class="co"># Get absolute values of ages</span></span>
 <span><span class="co">#&gt;  A  B  C </span></span>
 <span><span class="co">#&gt;  1  5 10</span></span>
-<span><span class="va">daf</span><span class="op">[</span><span class="st">"/ cell : age % Log base 2"</span><span class="op">]</span> <span class="co"># Get log2 of ages</span></span>
+<span><span class="va">daf</span><span class="op">[</span><span class="st">"@ cell : age % Log base 2"</span><span class="op">]</span> <span class="co"># Get log2 of ages</span></span>
 <span><span class="co">#&gt;        A        B        C </span></span>
 <span><span class="co">#&gt; 0.000000 2.321928 3.321928</span></span>
 <span></span>
 <span><span class="co"># Aggregations</span></span>
-<span><span class="va">daf</span><span class="op">[</span><span class="st">"/ cell : age %&gt; Max"</span><span class="op">]</span> <span class="co"># Get maximum age</span></span>
+<span><span class="va">daf</span><span class="op">[</span><span class="st">"@ cell : age &gt;&gt; Max"</span><span class="op">]</span> <span class="co"># Get maximum age</span></span>
 <span><span class="co">#&gt; [1] 10</span></span>
-<span><span class="va">daf</span><span class="op">[</span><span class="st">"/ cell : age %&gt; Mean"</span><span class="op">]</span> <span class="co"># Get mean age</span></span>
+<span><span class="va">daf</span><span class="op">[</span><span class="st">"@ cell : age &gt;&gt; Mean"</span><span class="op">]</span> <span class="co"># Get mean age</span></span>
 <span><span class="co">#&gt; [1] 5.333333</span></span>
 <span></span>
 <span><span class="co"># Complex operations can be built using the pipe operator or query functions</span></span>
 <span><span class="co"># Get types of cells with age &gt; 2</span></span>
 <span><span class="fu"><a href="reference/Axis.html">Axis</a></span><span class="op">(</span><span class="st">"cell"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="reference/AndMask.html">And</a></span><span class="op">(</span><span class="st">"age"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu"><a href="reference/BeginMask.html">BeginMask</a></span><span class="op">(</span><span class="st">"age"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="reference/IsGreater.html">IsGreater</a></span><span class="op">(</span><span class="fl">2</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>    <span class="fu"><a href="reference/LookupVector.html">Lookup</a></span><span class="op">(</span><span class="st">"type"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu"><a href="reference/EndMask.html">EndMask</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu"><a href="reference/LookupVector.html">LookupVector</a></span><span class="op">(</span><span class="st">"type"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>    <span class="fu"><a href="reference/get_query.html">get_query</a></span><span class="op">(</span><span class="va">daf</span><span class="op">)</span></span>
 <span><span class="co">#&gt;    B    C </span></span>
 <span><span class="co">#&gt;  "B" "NK"</span></span></code></pre></div>
 <p>The query syntax follows a simple pattern:</p>
 <ul>
 <li>
-<code>/ axis</code> selects an axis</li>
+<code>@ axis</code> selects an axis</li>
 <li>
-<code>: property</code> retrieves a property</li>
+<code>. property</code> retrieves a scalar</li>
+<li>
+<code>: property</code> retrieves a vector property</li>
+<li>
+<code>:: property</code> retrieves a matrix property</li>
 <li>
 <code>% operation</code> applies an element-wise operation</li>
 <li>
-<code>%&gt; reduction</code> applies a reduction operation</li>
+<code>&gt;&gt; reduction</code> applies a reduction operation</li>
 <li>
-<code>&amp; property</code> filters by a property</li>
-<li>
-<code>= value</code>, <code>&gt; value</code>, etc. apply comparison operations</li>
+<code>[ property comparison value ]</code> filters by a property</li>
 </ul>
-<p>See the Julia <a href="https://tanaylab.github.io/DataAxesFormats.jl/v0.1.2/queries.html" class="external-link">documentation</a> for more details about the query language.</p>
+<p>See the Julia <a href="https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/queries.html" class="external-link">documentation</a> for more details about the query language.</p>
 <div class="section level3">
-<h3 id="important-note-about-data-copying">Important Note About Data Copying<a class="anchor" aria-label="anchor" href="#important-note-about-data-copying"></a>
+<h3 id="note-on-data-transfer">Note on Data Transfer<a class="anchor" aria-label="anchor" href="#note-on-data-transfer"></a>
 </h3>
-<p>Due to limitations in JuliaCall, data is copied between R and Julia during function calls. This means that operations involving large matrices or vectors will incur memory overhead. For large datasets, consider performing more operations directly on the Julia side to minimize data transfers. This also means that creating properties with <code>empty_dense_vector</code> or <code>empty_sparse_vector</code> are not supported in the R version.</p>
+<p>The dafr package uses <a href="https://github.com/tanaylab/jlview" class="external-link">jlview</a> for zero-copy transfer of arrays from Julia to R. However, writing data from R to Julia (e.g., via <code>set_vector</code> or <code>set_matrix</code>) still involves copying through JuliaCall. This means that <code>get_empty_dense_vector</code>, <code>get_empty_sparse_vector</code> and their matrix equivalents do not provide the in-place filling benefit they offer in Julia.</p>
 </div>
 </div>
 <div class="section level2">
