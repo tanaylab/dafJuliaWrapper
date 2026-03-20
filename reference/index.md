@@ -28,6 +28,15 @@ Core functions for working with Daf objects
   [`name()`](https://tanaylab.github.io/dafr/reference/daf_name.md) :
   Gets the name of a Daf object
 
+## AnnData Facade
+
+AnnData-like live facade for Daf objects
+
+- [`DafAnnData`](https://tanaylab.github.io/dafr/reference/DafAnnData.md)
+  : AnnData-like live facade for a Daf object
+- [`as_anndata()`](https://tanaylab.github.io/dafr/reference/as_anndata.md)
+  : Create an AnnData-like facade for a Daf object
+
 ## Example Data
 
 Functions for loading example data
@@ -439,7 +448,7 @@ Operations for transforming and combining Daf objects
 Utility functions for working with Daf objects
 
 - [`empty_cache()`](https://tanaylab.github.io/dafr/reference/empty_cache.md)
-  : Empty cache in a Daf object
+  : Empty cache of a Daf object
 - [`set_seed()`](https://tanaylab.github.io/dafr/reference/set_seed.md)
   : Set a seed both in Julia and R
 - [`setup_logger()`](https://tanaylab.github.io/dafr/reference/setup_logger.md)
@@ -451,3 +460,21 @@ Deprecated functions and their replacements
 
 - [`deprecated-queries`](https://tanaylab.github.io/dafr/reference/deprecated-queries.md)
   : Deprecated query operations
+- [`And()`](https://tanaylab.github.io/dafr/reference/AndMask.md)
+  [`AndMask()`](https://tanaylab.github.io/dafr/reference/AndMask.md) :
+  AndMask query operation
+- [`AndNot()`](https://tanaylab.github.io/dafr/reference/AndNegatedMask.md)
+  [`AndNegatedMask()`](https://tanaylab.github.io/dafr/reference/AndNegatedMask.md)
+  : AndNegatedMask query operation
+- [`Or()`](https://tanaylab.github.io/dafr/reference/OrMask.md)
+  [`OrMask()`](https://tanaylab.github.io/dafr/reference/OrMask.md) :
+  OrMask query operation
+- [`OrNot()`](https://tanaylab.github.io/dafr/reference/OrNegatedMask.md)
+  [`OrNegatedMask()`](https://tanaylab.github.io/dafr/reference/OrNegatedMask.md)
+  : OrNegatedMask query operation
+- [`Xor()`](https://tanaylab.github.io/dafr/reference/XorMask.md)
+  [`XorMask()`](https://tanaylab.github.io/dafr/reference/XorMask.md) :
+  XorMask query operation
+- [`XorNot()`](https://tanaylab.github.io/dafr/reference/XorNegatedMask.md)
+  [`XorNegatedMask()`](https://tanaylab.github.io/dafr/reference/XorNegatedMask.md)
+  : XorNegatedMask query operation

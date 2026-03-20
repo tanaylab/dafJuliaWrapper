@@ -1,6 +1,6 @@
-# Empty cache in a Daf object
+# Empty cache of a Daf object
 
-Empty cache in a Daf object
+Clears both the Julia-side cache and the R-side cache for a Daf object.
 
 ## Usage
 
@@ -26,7 +26,7 @@ empty_cache(daf, clear = NULL, keep = NULL)
 
 ## Value
 
-The Daf object
+The Daf object (invisibly, for chaining operations)
 
 ## Details
 

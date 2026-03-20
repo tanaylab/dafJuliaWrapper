@@ -21,6 +21,7 @@
 <url><loc>https://tanaylab.github.io/dafr/reference/Count.html</loc></url>
 <url><loc>https://tanaylab.github.io/dafr/reference/CountBy.html</loc></url>
 <url><loc>https://tanaylab.github.io/dafr/reference/Daf.html</loc></url>
+<url><loc>https://tanaylab.github.io/dafr/reference/DafAnnData.html</loc></url>
 <url><loc>https://tanaylab.github.io/dafr/reference/EndMask.html</loc></url>
 <url><loc>https://tanaylab.github.io/dafr/reference/Fetch.html</loc></url>
 <url><loc>https://tanaylab.github.io/dafr/reference/Fraction.html</loc></url>
@@ -74,6 +75,7 @@
 <url><loc>https://tanaylab.github.io/dafr/reference/abnormal_handlers.html</loc></url>
 <url><loc>https://tanaylab.github.io/dafr/reference/adapter.html</loc></url>
 <url><loc>https://tanaylab.github.io/dafr/reference/add_axis.html</loc></url>
+<url><loc>https://tanaylab.github.io/dafr/reference/as_anndata.html</loc></url>
 <url><loc>https://tanaylab.github.io/dafr/reference/axes_set.html</loc></url>
 <url><loc>https://tanaylab.github.io/dafr/reference/axis_contract.html</loc></url>
 <url><loc>https://tanaylab.github.io/dafr/reference/axis_dict.html</loc></url>
