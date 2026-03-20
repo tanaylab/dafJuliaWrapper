@@ -8,12 +8,12 @@ for details.
 ## Usage
 
 ``` r
-GroupRowsBy(property, ...)
+GroupRowsBy(value, ...)
 ```
 
 ## Arguments
 
-- property:
+- value:
 
   String specifying the property to group rows by
 

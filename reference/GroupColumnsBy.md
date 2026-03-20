@@ -9,12 +9,12 @@ for details.
 ## Usage
 
 ``` r
-GroupColumnsBy(property, ...)
+GroupColumnsBy(value, ...)
 ```
 
 ## Arguments
 
-- property:
+- value:
 
   String specifying the property to group columns by
 

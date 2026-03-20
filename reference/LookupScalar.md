@@ -8,12 +8,12 @@ for details.
 ## Usage
 
 ``` r
-LookupScalar(property = NULL, ...)
+LookupScalar(value = NULL, ...)
 ```
 
 ## Arguments
 
-- property:
+- value:
 
   String specifying the scalar property name to look up
 

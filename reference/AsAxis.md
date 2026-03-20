@@ -11,12 +11,12 @@ for details.
 ## Usage
 
 ``` r
-AsAxis(axis = NULL, ...)
+AsAxis(value = NULL, ...)
 ```
 
 ## Arguments
 
-- axis:
+- value:
 
   Optional string specifying the axis name to use for interpreting the
   values

@@ -26,3 +26,7 @@ SquareRowIs(value, ...)
 ## Value
 
 A query operation object
+
+## Functions
+
+- `SquareMaskRow()`: Deprecated: use `SquareRowIs()` instead.

@@ -13,19 +13,27 @@ for details.
 ``` r
 Lookup(property, ...)
 
-LookupVector(property = NULL, ...)
+LookupVector(value = NULL, ...)
 ```
 
 ## Arguments
 
 - property:
 
-  String specifying the property name to look up
+  String specifying the property
 
 - ...:
 
   Additional arguments needed to support usage of pipe operator
 
+- value:
+
+  String specifying the property name to look up
+
 ## Value
 
 A query operation object that can be used in a query sequence
+
+## Functions
+
+- `Lookup()`: Deprecated: use `LookupVector()` instead.

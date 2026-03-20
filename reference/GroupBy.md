@@ -13,12 +13,12 @@ for details.
 ## Usage
 
 ``` r
-GroupBy(property, ...)
+GroupBy(value, ...)
 ```
 
 ## Arguments
 
-- property:
+- value:
 
   String specifying the property to group by
 

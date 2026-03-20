@@ -41,9 +41,7 @@ for details.
 
 ## See also
 
-Axis, LookupVector, LookupScalar, LookupMatrix, Names, AsAxis,
-IfMissing, IfNot, BeginMask, BeginNegatedMask, EndMask, SquareColumnIs,
-SquareRowIs, AndMask, AndNegatedMask, OrMask, OrNegatedMask, XorMask,
-XorNegatedMask, IsEqual, IsNotEqual, IsLess, IsLessEqual, IsGreater,
-IsGreaterEqual, IsMatch, IsNotMatch, CountBy, GroupBy, GroupColumnsBy,
-GroupRowsBy, ReduceToColumn, ReduceToRow and other query operations.
+[`has_query()`](https://tanaylab.github.io/dafr/reference/has_query.md),
+[`parse_query()`](https://tanaylab.github.io/dafr/reference/parse_query.md),
+[`get_dataframe_query()`](https://tanaylab.github.io/dafr/reference/get_dataframe_query.md),
+and the query operations documentation.

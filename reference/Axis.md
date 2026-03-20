@@ -10,12 +10,12 @@ for details.
 ## Usage
 
 ``` r
-Axis(axis = NULL, ...)
+Axis(value = NULL, ...)
 ```
 
 ## Arguments
 
-- axis:
+- value:
 
   Optional string specifying the axis name (NULL for unspecified)
 

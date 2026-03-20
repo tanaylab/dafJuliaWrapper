@@ -9,7 +9,7 @@ for details.
 ``` r
 OrNot(property, ...)
 
-OrNegatedMask(property, ...)
+OrNegatedMask(value, ...)
 ```
 
 ## Arguments
@@ -22,6 +22,14 @@ OrNegatedMask(property, ...)
 
   Additional arguments needed to support usage of pipe operator
 
+- value:
+
+  String specifying the property
+
 ## Value
 
 A query operation object
+
+## Functions
+
+- `OrNot()`: Deprecated: use `OrNegatedMask()` instead.

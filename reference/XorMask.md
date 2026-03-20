@@ -10,7 +10,7 @@ for details.
 ``` r
 Xor(property, ...)
 
-XorMask(property, ...)
+XorMask(value, ...)
 ```
 
 ## Arguments
@@ -23,6 +23,14 @@ XorMask(property, ...)
 
   Additional arguments needed to support usage of pipe operator
 
+- value:
+
+  String specifying the property
+
 ## Value
 
 A query operation object
+
+## Functions
+
+- `Xor()`: Deprecated: use `XorMask()` instead.

@@ -24,8 +24,9 @@ Core functions for working with Daf objects
   TanayLabUtilities
 - [`load_daf_packages()`](https://tanaylab.github.io/dafr/reference/load_daf_packages.md)
   : Load Julia packages needed for DataAxesFormats and TanayLabUtilities
-- [`name()`](https://tanaylab.github.io/dafr/reference/name.md) : Gets
-  the name of a Daf object
+- [`daf_name()`](https://tanaylab.github.io/dafr/reference/daf_name.md)
+  [`name()`](https://tanaylab.github.io/dafr/reference/daf_name.md) :
+  Gets the name of a Daf object
 
 ## Example Data
 

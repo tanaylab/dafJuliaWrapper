@@ -13,19 +13,27 @@ for details.
 ``` r
 Or(property, ...)
 
-OrMask(property, ...)
+OrMask(value, ...)
 ```
 
 ## Arguments
 
 - property:
 
-  String specifying the property to use for expanding the selection
+  String specifying the property
 
 - ...:
 
   Additional arguments needed to support usage of pipe operator
 
+- value:
+
+  String specifying the property to use for expanding the selection
+
 ## Value
 
 A query operation object that can be used in a query sequence
+
+## Functions
+
+- `Or()`: Deprecated: use `OrMask()` instead.

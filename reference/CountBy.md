@@ -13,12 +13,12 @@ for details.
 ## Usage
 
 ``` r
-CountBy(property, ...)
+CountBy(value, ...)
 ```
 
 ## Arguments
 
-- property:
+- value:
 
   String specifying the property to count combinations with
 

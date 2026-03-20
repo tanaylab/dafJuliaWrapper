@@ -9,7 +9,7 @@ for details.
 ``` r
 AndNot(property, ...)
 
-AndNegatedMask(property, ...)
+AndNegatedMask(value, ...)
 ```
 
 ## Arguments
@@ -22,6 +22,14 @@ AndNegatedMask(property, ...)
 
   Additional arguments needed to support usage of pipe operator
 
+- value:
+
+  String specifying the property
+
 ## Value
 
 A query operation object
+
+## Functions
+
+- `AndNot()`: Deprecated: use `AndNegatedMask()` instead.

@@ -8,12 +8,12 @@ for details.
 ## Usage
 
 ``` r
-LookupMatrix(property, ...)
+LookupMatrix(value, ...)
 ```
 
 ## Arguments
 
-- property:
+- value:
 
   String specifying the matrix property name to look up
 

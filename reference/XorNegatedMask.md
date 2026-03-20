@@ -9,7 +9,7 @@ for details.
 ``` r
 XorNot(property, ...)
 
-XorNegatedMask(property, ...)
+XorNegatedMask(value, ...)
 ```
 
 ## Arguments
@@ -22,6 +22,14 @@ XorNegatedMask(property, ...)
 
   Additional arguments needed to support usage of pipe operator
 
+- value:
+
+  String specifying the property
+
 ## Value
 
 A query operation object
+
+## Functions
+
+- `XorNot()`: Deprecated: use `XorNegatedMask()` instead.

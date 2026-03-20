@@ -26,3 +26,7 @@ SquareColumnIs(value, ...)
 ## Value
 
 A query operation object
+
+## Functions
+
+- `SquareMaskColumn()`: Deprecated: use `SquareColumnIs()` instead.

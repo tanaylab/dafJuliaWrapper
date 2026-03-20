@@ -8,12 +8,12 @@ for details.
 ## Usage
 
 ``` r
-BeginNegatedMask(property, ...)
+BeginNegatedMask(value, ...)
 ```
 
 ## Arguments
 
-- property:
+- value:
 
   String specifying the property name for the initial negated mask
 

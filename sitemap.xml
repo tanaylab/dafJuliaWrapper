@@ -100,6 +100,7 @@
 <url><loc>https://tanaylab.github.io/dafr/reference/copy_vector.html</loc></url>
 <url><loc>https://tanaylab.github.io/dafr/reference/create_contract.html</loc></url>
 <url><loc>https://tanaylab.github.io/dafr/reference/daf_as_h5ad.html</loc></url>
+<url><loc>https://tanaylab.github.io/dafr/reference/daf_name.html</loc></url>
 <url><loc>https://tanaylab.github.io/dafr/reference/dafr-package.html</loc></url>
 <url><loc>https://tanaylab.github.io/dafr/reference/delete_axis.html</loc></url>
 <url><loc>https://tanaylab.github.io/dafr/reference/delete_matrix.html</loc></url>
@@ -144,7 +145,6 @@
 <url><loc>https://tanaylab.github.io/dafr/reference/matrix_contract.html</loc></url>
 <url><loc>https://tanaylab.github.io/dafr/reference/matrix_version_counter.html</loc></url>
 <url><loc>https://tanaylab.github.io/dafr/reference/memory_daf.html</loc></url>
-<url><loc>https://tanaylab.github.io/dafr/reference/name.html</loc></url>
 <url><loc>https://tanaylab.github.io/dafr/reference/open_daf.html</loc></url>
 <url><loc>https://tanaylab.github.io/dafr/reference/parse_query.html</loc></url>
 <url><loc>https://tanaylab.github.io/dafr/reference/print.Daf.html</loc></url>

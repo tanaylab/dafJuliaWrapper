@@ -8,12 +8,12 @@ for details.
 ## Usage
 
 ``` r
-BeginMask(property, ...)
+BeginMask(value, ...)
 ```
 
 ## Arguments
 
-- property:
+- value:
 
   String specifying the property name for the initial mask
 

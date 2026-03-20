@@ -14,19 +14,27 @@ for details.
 ``` r
 And(property, ...)
 
-AndMask(property, ...)
+AndMask(value, ...)
 ```
 
 ## Arguments
 
 - property:
 
-  String specifying the property to use as a filter mask
+  String specifying the property
 
 - ...:
 
   Additional arguments needed to support usage of pipe operator
 
+- value:
+
+  String specifying the property to use as a filter mask
+
 ## Value
 
 A query operation object that can be used in a query sequence
+
+## Functions
+
+- `And()`: Deprecated: use `AndMask()` instead.
