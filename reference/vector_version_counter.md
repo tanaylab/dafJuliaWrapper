@@ -25,9 +25,13 @@ vector_version_counter(daf, axis, name)
 
 ## Value
 
-An integer version counter
+A character string representing the current counter value. Returned as a
+string rather than an R integer because the Julia-side counter is a
+`UInt32` that can exceed R's signed-integer range.
 
 ## Details
 
 The version counter is incremented whenever the vector data is modified.
-This can be used to detect changes and invalidate caches.
+Compare counters with
+[`identical()`](https://rdrr.io/r/base/identical.html) or `==` on the
+strings.

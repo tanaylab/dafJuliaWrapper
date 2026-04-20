@@ -13,6 +13,10 @@ ALL_SCALARS
 
 Character string
 
+## Value
+
+A character string specifier for all scalars.
+
 ## References
 
 <https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/views.html#DataAxesFormats.Views.ALL_SCALARS>

@@ -20,3 +20,14 @@ memory_daf(name = "memory")
 ## Value
 
 A Daf object with in-memory storage
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+setup_daf()
+daf <- memory_daf("example")
+add_axis(daf, "cell", c("A", "B", "C"))
+set_vector(daf, "cell", "score", c(1.0, 2.0, 3.0))
+} # }
+```

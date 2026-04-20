@@ -14,6 +14,10 @@ VIEW_ALL_SCALARS
 
 A named list representing the pair ALL_SCALARS =\> "="
 
+## Value
+
+A named list specifier to expose all scalars.
+
 ## References
 
 <https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/views.html#DataAxesFormats.Views.VIEW_ALL_SCALARS>

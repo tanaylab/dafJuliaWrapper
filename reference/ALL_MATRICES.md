@@ -13,6 +13,10 @@ ALL_MATRICES
 
 Character vector of length 3
 
+## Value
+
+A character vector specifier for all matrices.
+
 ## References
 
 <https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/views.html#DataAxesFormats.Views.ALL_MATRICES>

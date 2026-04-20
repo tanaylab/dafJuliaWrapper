@@ -28,3 +28,13 @@ h5df(root, mode = "r", name = NULL)
 ## Value
 
 A Daf object with HDF5-based storage
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+setup_daf()
+h5_path <- file.path(tempdir(), "example.h5")
+daf <- h5df(h5_path, "w", name = "example")
+} # }
+```

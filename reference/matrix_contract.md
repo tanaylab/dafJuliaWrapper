@@ -24,7 +24,8 @@ matrix_contract(rows_axis, cols_axis, name, expectation, dtype, description)
 
 - expectation:
 
-  One of RequiredInput, OptionalInput, GuaranteedOutput, OptionalOutput
+  One of RequiredInput, OptionalInput, CreatedOutput, GuaranteedOutput,
+  OptionalOutput
 
 - dtype:
 

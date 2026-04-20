@@ -20,3 +20,7 @@ An object of class `character` of length 1.
 An object of class `character` of length 1.
 
 An object of class `character` of length 1.
+
+## Value
+
+A character string representing the handler type.

@@ -61,3 +61,16 @@ with axes flipped for faster access. NA values are not supported in Daf.
 See the Julia
 [documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/writers.html#DataAxesFormats.Writers.set_matrix!)
 for details.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+setup_daf()
+daf <- memory_daf("example")
+add_axis(daf, "cell", c("A", "B"))
+add_axis(daf, "gene", c("X", "Y", "Z"))
+mat <- matrix(1:6, nrow = 2, ncol = 3)
+set_matrix(daf, "cell", "gene", "UMIs", mat)
+} # }
+```

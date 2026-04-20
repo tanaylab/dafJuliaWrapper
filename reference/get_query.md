@@ -41,7 +41,19 @@ for details.
 
 ## See also
 
-[`has_query()`](https://tanaylab.github.io/dafr/reference/has_query.md),
-[`parse_query()`](https://tanaylab.github.io/dafr/reference/parse_query.md),
-[`get_dataframe_query()`](https://tanaylab.github.io/dafr/reference/get_dataframe_query.md),
+[`has_query()`](https://tanaylab.github.io/dafJuliaWrapper/reference/has_query.md),
+[`parse_query()`](https://tanaylab.github.io/dafJuliaWrapper/reference/parse_query.md),
+[`get_dataframe_query()`](https://tanaylab.github.io/dafJuliaWrapper/reference/get_dataframe_query.md),
 and the query operations documentation.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+setup_daf()
+daf <- memory_daf("example")
+add_axis(daf, "cell", c("A", "B", "C"))
+set_vector(daf, "cell", "score", c(1.0, 2.0, 3.0))
+get_query(daf, Axis("cell") |> LookupVector("score"))
+} # }
+```

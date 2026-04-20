@@ -43,3 +43,17 @@ with the axes flipped (i.e., rows as columns and columns as rows). See
 the Julia
 [documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/readers.html#DataAxesFormats.Readers.has_matrix)
 for details.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+setup_daf()
+daf <- memory_daf("example")
+add_axis(daf, "cell", c("A", "B"))
+add_axis(daf, "gene", c("X", "Y", "Z"))
+mat <- matrix(1:6, nrow = 2, ncol = 3)
+set_matrix(daf, "cell", "gene", "UMIs", mat)
+has_matrix(daf, "cell", "gene", "UMIs") # TRUE
+} # }
+```

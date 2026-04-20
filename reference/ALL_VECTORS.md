@@ -13,6 +13,10 @@ ALL_VECTORS
 
 Character vector of length 2
 
+## Value
+
+A character vector specifier for all vectors.
+
 ## References
 
 <https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/views.html#DataAxesFormats.Views.ALL_VECTORS>

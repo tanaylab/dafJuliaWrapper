@@ -30,3 +30,15 @@ matrix data are stored. Each axis has a collection of unique named
 entries. See the Julia
 [documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/readers.html#DataAxesFormats.Readers.has_axis)
 for details.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+setup_daf()
+daf <- memory_daf("example")
+add_axis(daf, "cell", c("A", "B", "C"))
+has_axis(daf, "cell") # TRUE
+has_axis(daf, "gene") # FALSE
+} # }
+```

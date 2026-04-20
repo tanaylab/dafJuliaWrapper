@@ -38,3 +38,14 @@ If the axis already exists and `overwrite` is FALSE, an error will be
 raised. Entry names must be unique within the axis. See the Julia
 [documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/writers.html#DataAxesFormats.Writers.add_axis!)
 for details.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+setup_daf()
+daf <- memory_daf("example")
+add_axis(daf, "cell", c("A", "B", "C"))
+add_axis(daf, "gene", c("X", "Y", "Z"))
+} # }
+```

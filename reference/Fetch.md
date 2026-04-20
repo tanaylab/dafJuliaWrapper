@@ -1,8 +1,9 @@
 # Fetch (Deprecated)
 
 This function has been removed in DataAxesFormats v0.2.0. Use
-[`LookupVector`](https://tanaylab.github.io/dafr/reference/LookupVector.md)
-with [`AsAxis()`](https://tanaylab.github.io/dafr/reference/AsAxis.md)
+[`LookupVector`](https://tanaylab.github.io/dafJuliaWrapper/reference/LookupVector.md)
+with
+[`AsAxis()`](https://tanaylab.github.io/dafJuliaWrapper/reference/AsAxis.md)
 instead.
 
 ## Usage
@@ -20,3 +21,7 @@ Fetch(property, ...)
 - ...:
 
   Additional arguments (ignored).
+
+## Value
+
+Does not return; always raises an error.

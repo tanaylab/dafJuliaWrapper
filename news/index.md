@@ -1,233 +1,93 @@
 # Changelog
 
-## dafr 0.1.0
+## dafJuliaWrapper 0.1.0
 
-### Breaking Changes
+**First CRAN release. Renamed from `dafr` — the `dafr` name has been
+freed for a native-R reimplementation in a separate repository. This
+package is the JuliaCall-based wrapper around DataAxesFormats.jl and has
+been renamed accordingly.**
 
-#### Updated to DataAxesFormats.jl v0.2.0 API
+### Migration from `dafr`
 
-- Renamed query operations to match v0.2.0 naming:
-  - `Lookup` -\> `LookupVector`
-  - `And` -\> `AndMask`
-  - `AndNot` -\> `AndNegatedMask`
-  - `Or` -\> `OrMask`
-  - `OrNot` -\> `OrNegatedMask`
-  - `Xor` -\> `XorMask`
-  - `XorNot` -\> `XorNegatedMask`
-  - `SquareMaskColumn` -\> `SquareColumnIs`
-  - `SquareMaskRow` -\> `SquareRowIs`
-- Removed `Fetch` and `MaskSlice` (deprecated wrappers still provided
-  for backwards compatibility)
-- Deprecated wrappers provided for all renamed functions with
-  deprecation warnings
-
-#### Parameter Changes
-
-- `Names`: removed `kind` parameter
-- `IfMissing`: `missing_value` renamed to `default_value`, `type`
-  parameter removed
-- `Axis`: now optional in queries
+- [`library(dafr)`](https://rdrr.io/r/base/library.html) becomes
+  [`library(dafJuliaWrapper)`](https://tanaylab.github.io/dafJuliaWrapper/).
+- `options(dafr.JULIA_HOME = ...)` becomes
+  `options(dafJuliaWrapper.JULIA_HOME = ...)`; same for
+  `dafr.julia_environment` and other `dafr.*` options.
+- Public API (function names, arguments, return shapes) is unchanged.
 
 ### New Features
 
-#### New Query Operations
+#### AnnData-like facade
 
-- Added `LookupScalar` for looking up scalar data
-- Added `LookupMatrix` for looking up matrix data
-- Added `BeginMask` for starting a mask combination
-- Added `BeginNegatedMask` for starting a negated mask combination
-- Added `EndMask` for ending a mask combination
-- Added `GroupColumnsBy` for grouping columns
-- Added `GroupRowsBy` for grouping rows
-- Added `ReduceToColumn` for reducing matrix to a column vector
-- Added `ReduceToRow` for reducing matrix to a row vector
+- `as_anndata(daf)` returns a `DafAnnData` R6 object exposing `$X`,
+  `$obs`, `$var`, `$layers`, `$uns`, `$obs_names`, `$var_names`,
+  `$n_obs`, `$n_vars`, and `$shape`. Read-only and live: accesses go
+  through to the underlying Daf on demand, served by the R-side cache on
+  hits. `obs_axis`/`var_axis` auto-detect `cell`/`metacell` and `gene`;
+  `x_name` is validated at construction.
 
-#### New Functions
+#### R-side caching
 
-- Added `complete_path` for constructing complete paths to Daf data
-- Added `complete_chain` for opening complete chain Daf repositories
+- `get_vector`, `get_matrix`, and `axis_vector` now cache results on the
+  R side, keyed by Daf-level version counters so that modifications via
+  `set_vector`/`set_matrix`/`add_axis` invalidate entries automatically.
+- The cache env is stored directly on each `Daf` object, so there is no
+  global registry and no leak. Two R-level copies of the same `Daf` list
+  share the cache (reference semantics); two wrappers of the same Julia
+  object get separate caches.
+- `empty_cache(daf, clear = ..., keep = ...)` now always purges the
+  R-side cache (regardless of selectors) and validates its arguments
+  with `match.arg`.
 
-#### Documentation
+#### Contracts
 
-- All documentation URLs updated to DataAxesFormats.jl v0.2.0
+- New `CreatedOutput` expectation type, matching DataAxesFormats.jl
+  v0.2.0. Like `GuaranteedOutput`, a `CreatedOutput` item is expected to
+  be produced by the computation and warns if a value is already
+  present; unlike `OptionalOutput`, which never warns.
 
-## dafr 0.0.3
+### Performance
 
-### New Functions
+- Consolidated `from_julia_array` from 9 sequential Julia↔︎R bridge calls
+  to 4 (5–6 for named arrays). The helper is re-entrant and uses
+  structured Tuple return (no Main-level globals, no string delimiters).
+- `_prepare_for_r` eagerly materialises dense non-zero-copy types
+  (`Bool`, `String`, etc.) in Julia, saving a `collect()` round-trip on
+  the R side.
+- Version counters are now fetched as strings, preventing `UInt32`
+  overflow when converting to R integers. `axis_version_counter`,
+  `vector_version_counter`, and `matrix_version_counter` return
+  character strings; compare with
+  [`identical()`](https://rdrr.io/r/base/identical.html) or `==`.
+- `_prepare_for_r` flattens type dispatch to reduce cold-start JIT cost.
 
-#### New Operations
+### CRAN compliance
 
-- Added [`Count()`](https://tanaylab.github.io/dafr/reference/Count.md)
-  for counting non-zero elements, with optional `type` parameter
-- Added
-  [`GeoMean()`](https://tanaylab.github.io/dafr/reference/GeoMean.md)
-  for geometric mean reduction, with optional `type` and `eps`
-  parameters
-- Added [`Mode()`](https://tanaylab.github.io/dafr/reference/Mode.md)
-  for most common value reduction
+- DESCRIPTION: updated `Title`, `Description`, `URL`, `BugReports`.
+- `cran-comments.md` documents Julia dependency handling, `\dontrun{}`
+  examples, vignette eval-off, and the `JULIA_AVAILABLE` test guard.
+- Vignette chunks are explicitly `eval = FALSE, purl = FALSE` so R CMD
+  check’s tangle step does not try to initialise Julia.
+- `inst/WORDLIST` updated for spelling checks.
+- All Julia-dependent tests guarded with `skip_if(!JULIA_AVAILABLE)`.
 
-#### Query Utilities
+### Safety
 
-- Added
-  [`escape_value()`](https://tanaylab.github.io/dafr/reference/escape_value.md)
-  for escaping special characters in query strings
-- Added
-  [`unescape_value()`](https://tanaylab.github.io/dafr/reference/unescape_value.md)
-  for reversing
-  [`escape_value()`](https://tanaylab.github.io/dafr/reference/escape_value.md)
-- Added
-  [`query_requires_relayout()`](https://tanaylab.github.io/dafr/reference/query_requires_relayout.md)
-  to check if a query needs data relayout
+- `jl_R_to_julia_type` (internal) now validates string inputs against a
+  whitelist regex and rejects anything that isn’t a plausible Julia type
+  name. Prevents arbitrary Julia code execution via the type-conversion
+  path.
+- `Daf(jl_obj)` rejects non-JuliaObject inputs with a clear error
+  instead of passing them through silently.
 
-#### Empty Data Functions
+### Breaking changes vs. `dafr`
 
-- Added
-  [`get_empty_dense_vector()`](https://tanaylab.github.io/dafr/reference/get_empty_dense_vector.md)
-  for getting empty dense vectors for in-place filling
-- Added
-  [`get_empty_sparse_vector()`](https://tanaylab.github.io/dafr/reference/get_empty_sparse_vector.md)
-  for getting empty sparse vectors for in-place filling
-- Added
-  [`get_empty_dense_matrix()`](https://tanaylab.github.io/dafr/reference/get_empty_dense_matrix.md)
-  for getting empty dense matrices for in-place filling
-- Added
-  [`get_empty_sparse_matrix()`](https://tanaylab.github.io/dafr/reference/get_empty_sparse_matrix.md)
-  for getting empty sparse matrices for in-place filling
-- Added
-  [`filled_empty_sparse_vector()`](https://tanaylab.github.io/dafr/reference/filled_empty_sparse_vector.md)
-  for committing filled sparse vectors back to Daf
-- Added
-  [`filled_empty_sparse_matrix()`](https://tanaylab.github.io/dafr/reference/filled_empty_sparse_matrix.md)
-  for committing filled sparse matrices back to Daf
-- Exported
-  [`get_frame()`](https://tanaylab.github.io/dafr/reference/get_frame.md)
-  for direct use
+- Package name. All the options and
+  [`library()`](https://rdrr.io/r/base/library.html) calls above.
+- `get_vector` / `get_matrix` return values for zero-copy types are now
+  live views over Julia memory (via `jlview` / `jlview_sparse`). Copy
+  explicitly (`as.numeric(v)`, `as.matrix(m)`) if stability across
+  subsequent Daf modifications is needed.
 
-### Enhanced Parameters
-
-- Added `type` parameter to all reduction operations (`Abs`, `Sum`,
-  `Mean`, `Median`, `Quantile`, `Var`, `VarN`, `Std`, `StdN`, `Min`,
-  `Max`, `Count`, `Fraction`, `Round`, `Clamp`, `Log`)
-- Added `eps` parameter to `VarN`, `StdN`, `GeoMean`
-- Added `type` and `insist` parameters to
-  [`copy_scalar()`](https://tanaylab.github.io/dafr/reference/copy_scalar.md)
-- Added `eltype`, `bestify`, `min_sparse_saving_fraction`, and `insist`
-  parameters to
-  [`copy_vector()`](https://tanaylab.github.io/dafr/reference/copy_vector.md)
-- Added `eltype`, `bestify`, `min_sparse_saving_fraction`, and `insist`
-  parameters to
-  [`copy_matrix()`](https://tanaylab.github.io/dafr/reference/copy_matrix.md)
-- Added `relayout`, `bestify`, `min_sparse_saving_fraction` parameters
-  to
-  [`copy_tensor()`](https://tanaylab.github.io/dafr/reference/copy_tensor.md)
-- Added `X_eltype` parameter to
-  [`daf_as_h5ad()`](https://tanaylab.github.io/dafr/reference/daf_as_h5ad.md)
-
-### CI/CD
-
-- Added GitHub Actions workflows for R CMD check, conda build, and
-  pkgdown site deployment
-- Added conda recipe for building and distributing conda packages
-- Fixed CI test execution to properly install package before running
-  testthat tests
-
-### Tests
-
-- Added comprehensive tests for all new functions and parameters
-- New test files: `test-operations.R`, `test-copies.R`,
-  `test-data-writers.R`, `test-queries.R`, `test-anndata_format.R`
-
-## dafr 0.0.2
-
-### New Features
-
-#### Contract System
-
-- Added
-  [`create_contract()`](https://tanaylab.github.io/dafr/reference/create_contract.md)
-  for defining data contracts with axes and data specifications
-- Added
-  [`axis_contract()`](https://tanaylab.github.io/dafr/reference/axis_contract.md),
-  [`scalar_contract()`](https://tanaylab.github.io/dafr/reference/scalar_contract.md),
-  [`vector_contract()`](https://tanaylab.github.io/dafr/reference/vector_contract.md),
-  [`matrix_contract()`](https://tanaylab.github.io/dafr/reference/matrix_contract.md)
-  for specifying contract requirements
-- Added
-  [`tensor_contract()`](https://tanaylab.github.io/dafr/reference/tensor_contract.md)
-  for 3D tensor specifications
-- Added
-  [`verify_contract()`](https://tanaylab.github.io/dafr/reference/verify_contract.md),
-  [`verify_input()`](https://tanaylab.github.io/dafr/reference/verify_input.md),
-  [`verify_output()`](https://tanaylab.github.io/dafr/reference/verify_output.md)
-  for validating Daf objects against contracts
-- Added
-  [`contractor()`](https://tanaylab.github.io/dafr/reference/contractor.md)
-  for creating contract-aware Daf wrappers
-- Added
-  [`contract_docs()`](https://tanaylab.github.io/dafr/reference/contract_docs.md)
-  for generating markdown/text documentation from contracts
-- Added expectation types: `RequiredInput`, `OptionalInput`,
-  `GuaranteedOutput`, `OptionalOutput`
-
-#### Group Functions
-
-- Added
-  [`group_names()`](https://tanaylab.github.io/dafr/reference/group_names.md)
-  for generating unique deterministic names for groups based on members
-- Added
-  [`collect_group_members()`](https://tanaylab.github.io/dafr/reference/collect_group_members.md)
-  for converting group indices to member lists
-- Added
-  [`compact_groups()`](https://tanaylab.github.io/dafr/reference/compact_groups.md)
-  for compacting non-consecutive group indices to 1..N
-
-#### View Constants
-
-- Added `VIEW_ALL_AXES`, `VIEW_ALL_SCALARS`, `VIEW_ALL_VECTORS`,
-  `VIEW_ALL_MATRICES`, `VIEW_ALL_DATA` constants for creating views of
-  complete data
-
-#### Query Utilities
-
-- Added
-  [`is_axis_query()`](https://tanaylab.github.io/dafr/reference/is_axis_query.md)
-  to check if a query targets only axes
-- Added
-  [`query_axis_name()`](https://tanaylab.github.io/dafr/reference/query_axis_name.md)
-  to extract axis name from axis-only queries
-
-#### Version Counters
-
-- Added
-  [`axis_version_counter()`](https://tanaylab.github.io/dafr/reference/axis_version_counter.md),
-  [`vector_version_counter()`](https://tanaylab.github.io/dafr/reference/vector_version_counter.md),
-  [`matrix_version_counter()`](https://tanaylab.github.io/dafr/reference/matrix_version_counter.md)
-  for tracking data modifications
-
-#### Complete/Open Functions
-
-- Added
-  [`complete_daf()`](https://tanaylab.github.io/dafr/reference/complete_daf.md)
-  for opening complete chains of Daf repositories
-- Added
-  [`open_daf()`](https://tanaylab.github.io/dafr/reference/open_daf.md)
-  for smart opening of files-based or HDF5-based Daf
-
-#### Example Data
-
-- Added
-  [`example_chain_daf()`](https://tanaylab.github.io/dafr/reference/example_chain_daf.md)
-  for creating example chain data
-
-### Improvements
-
-- Added `tensors` parameter to
-  [`description()`](https://tanaylab.github.io/dafr/reference/description.md)
-  function
-- Fixed issue with error when returning only names
-  ([\#6](https://github.com/tanaylab/dafr/issues/6))
-- Improved test coverage with 1201 tests (up from baseline)
-
-## dafr 0.0.1
-
-- Initial WIP
+------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 # MaskSlice (Deprecated)
 
 This function has been removed in DataAxesFormats v0.2.0. Use
-[`BeginMask`](https://tanaylab.github.io/dafr/reference/BeginMask.md)/[`EndMask`](https://tanaylab.github.io/dafr/reference/EndMask.md)
+[`BeginMask`](https://tanaylab.github.io/dafJuliaWrapper/reference/BeginMask.md)/[`EndMask`](https://tanaylab.github.io/dafJuliaWrapper/reference/EndMask.md)
 instead.
 
 ## Usage
@@ -19,3 +19,7 @@ MaskSlice(axis, ...)
 - ...:
 
   Additional arguments (ignored).
+
+## Value
+
+Does not return; always raises an error.

@@ -13,6 +13,10 @@ ALL_AXES
 
 Character string
 
+## Value
+
+A character string specifier for all axes.
+
 ## References
 
 <https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/views.html#DataAxesFormats.Views.ALL_AXES>

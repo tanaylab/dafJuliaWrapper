@@ -16,7 +16,8 @@ axis_contract(name, expectation, description)
 
 - expectation:
 
-  One of RequiredInput, OptionalInput, GuaranteedOutput, OptionalOutput
+  One of RequiredInput, OptionalInput, CreatedOutput, GuaranteedOutput,
+  OptionalOutput
 
 - description:
 

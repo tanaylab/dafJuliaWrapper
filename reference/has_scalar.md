@@ -29,3 +29,14 @@ Scalar properties are global values associated with the entire Daf data
 set. See the Julia
 [documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/readers.html#DataAxesFormats.Readers.has_scalar)
 for details.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+setup_daf()
+daf <- memory_daf("example")
+set_scalar(daf, "version", "1.0")
+has_scalar(daf, "version") # TRUE
+} # }
+```

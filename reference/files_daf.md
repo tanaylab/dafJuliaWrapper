@@ -28,3 +28,13 @@ files_daf(path, mode = "r", name = NULL)
 ## Value
 
 A Daf object with file-based storage
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+setup_daf()
+daf <- files_daf(tempdir(), "w", name = "example")
+add_axis(daf, "gene", c("X", "Y", "Z"))
+} # }
+```

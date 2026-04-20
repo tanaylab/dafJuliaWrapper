@@ -34,3 +34,14 @@ Numeric scalars are returned as integers or doubles, regardless of the
 specific data type they are stored as in the Daf data set. See the Julia
 [documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/readers.html#DataAxesFormats.Readers.get_scalar)
 for details.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+setup_daf()
+daf <- memory_daf("example")
+set_scalar(daf, "version", "1.0")
+get_scalar(daf, "version") # "1.0"
+} # }
+```

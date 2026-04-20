@@ -38,3 +38,14 @@ If the scalar already exists and `overwrite` is FALSE, an error will be
 raised. NA values are not supported in Daf. See the Julia
 [documentation](https://tanaylab.github.io/DataAxesFormats.jl/v0.2.0/writers.html#DataAxesFormats.Writers.set_scalar!)
 for details.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+setup_daf()
+daf <- memory_daf("example")
+set_scalar(daf, "version", "1.0")
+get_scalar(daf, "version") # "1.0"
+} # }
+```
